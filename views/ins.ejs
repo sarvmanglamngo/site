@@ -24,7 +24,7 @@
 			data-email = user.email
 			data-phone = '9960119040'
 			data-user_id = user.id
-			data-redirect_url = "http://localhost:3000/callback?user_id=${user.id}'"
+			data-redirect_url = "${req.protocol}://${req.get("host")}/callback?user_id=${user.id}'"
             data-webhook_url = '/webhook/'
     >
         </script>
@@ -39,7 +39,7 @@
     </form>
     <body>
         <button onclick ="onButtonClick()">Monetary Donations</button>
-        <button type = "submit" onclick = "location.href= 'http://localhost:3000/other'">Other Donations</button>
+        <button type = "submit" onclick = "location.href= '${req.protocol}://${req.get("host")}/other'">Other Donations</button>
         </br></br></br><p style="font-family:'impact';font-size:30px;text-align:center;">Remember that the happiest people are not those getting more, but those giving more.</p>
     </body>
    
