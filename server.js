@@ -1,5 +1,5 @@
 const MONGO_DB = process.env.MONGO_DB;
-const SK = process.env.SK;
+// const SK = process.env.SK;
 var express = require('express')
 var app = express()
 app.set("view engine", "ejs")
@@ -31,7 +31,7 @@ var bodyParser = require("body-parser")
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 1160000 } }))
 const secret = 'abcdefg';
-var stripe = require("stripe")(SK);
+// var stripe = require("stripe")(SK);
 
 const ItemSchema = new Schema({
     name: String,
