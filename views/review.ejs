@@ -45,7 +45,7 @@ color:lightblue;
         </button>
     </form>
 
-    <button onclick="location.href= 'http://localhost:3000/'" style="width: 30rem; background-color: #01b0d1; height: 3rem; font-size: 1.5rem;">HOME</button>
+    <button onclick="location.href= '${req.protocol}://${req.get("host")}/'" style="width: 30rem; background-color: #01b0d1; height: 3rem; font-size: 1.5rem;">HOME</button>
 
     <h1>Reviews</h1>
     <table  style="border :3px solid;border-color: #01b0d1;width:30rem"class ="table">
