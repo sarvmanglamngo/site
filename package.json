@@ -1,0 +1,33 @@
+{
+  "name": "sarvmanglam-ngo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express-session": "^1.17.1",
+    "express": "^4.17.1",
+    "instamojo-nodejs": "^0.0.5",
+    "init": "^0.1.2",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.9",
+    "nodemon": "^2.0.3",
+    "stripe": "^8.44.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "start":"node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarvmanglamngo/site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarvmanglamngo/site/issues"
+  },
+  "homepage": "https://github.com/sarvmanglamngo/site#readme"
+}
