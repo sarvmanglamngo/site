@@ -1,4 +1,4 @@
-const MONGO_DB = process.env.MONGO_DB;
+const MONGO_DB = process.env.MONGO_DB||require("./config/secrets").MONGO_DB;
 // const SK = process.env.SK;
 var express = require('express')
 var app = express()
