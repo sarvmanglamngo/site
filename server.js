@@ -84,9 +84,12 @@ app.post('/register', urlencodedParser, function (req, res) {
             console.log(err, 'error')
             return
         }
-        res.render('success')
+        res.redirect('/success')
 
     });
+})
+app.get('/success', function (req, res) {
+    res.render('success')
 })
 
 app.get('/review', (req, res) => {
@@ -144,9 +147,12 @@ app.post('/other', urlencodedParser, (req, res) => {
             return
         }
         req.session.item = doc;
-        res.render('do')
+        res.redirect('/do')
 
     });
+})
+app.get('/do', function (req, res) {
+    res.render('do')
 })
 const port = process.env.PORT || 3000;
 app.listen(port, function () {
