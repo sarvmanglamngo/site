@@ -53,8 +53,7 @@ const UserSchema = new Schema({
         unique: true
     },
     phn : Number,
-    date:String,
-    password: String
+    date:String
 });
 const User = mongoose.model('User', UserSchema);
 const blogScehma = new Schema({
@@ -80,13 +79,12 @@ app.post('/register', urlencodedParser, function (req, res) {
     newUser.email = req.body.email;
     newUser.phn = req.body.phn;
     newUser.date = req.body.date;
-    newUser.password = req.body.password;
     newUser.save(function (err) {
         if (err) {
             console.log(err, 'error')
             return
         }
-        res.redirect('/')
+        res.render('success')
 
     });
 })
@@ -146,7 +144,7 @@ app.post('/other', urlencodedParser, (req, res) => {
             return
         }
         req.session.item = doc;
-        res.redirect('/')
+        res.render('do')
 
     });
 })
